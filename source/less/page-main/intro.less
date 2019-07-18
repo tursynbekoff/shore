@@ -1,0 +1,99 @@
+
+@media screen and (min-width: @desktop-viewport) {
+  .intro {
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: black;
+    background-image: url("../img/hero_desktop.jpg");
+    background-position: 50.4% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+  }
+
+  .intro__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: @desktop-width;
+    margin: auto;
+  }
+
+  .intro__title {
+    position: relative;
+    width: 385px;
+    margin-top: 82px;
+
+    font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
+    font-weight: 400;
+    font-size: @title-font-size;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -39px;
+      left: 0;
+      width: 80px;
+      height: 8px;
+      background-color: @under-title-color;
+
+    }
+  }
+
+  .intro__text {
+    width: 380px;
+    margin-top: 21px;
+
+    font-size: @text-font-size;
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    letter-spacing: 0.57px;
+    font-weight: bold;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .intro__promo-list {
+    margin-top: 5px;
+    margin-left: 45px;
+  }
+
+  .intro__list {
+    position: relative;
+    width: 340px;
+
+    line-height: 22px;
+    letter-spacing: 0.57px;
+    margin-bottom: 0px;
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 11px;
+      left: -45px;
+      top: 6px;
+
+      background-image: url("../img/arrow_green.svg");
+    }
+  }
+
+  .intro__button {
+    margin-top: 32px;
+    width: 266px;
+    padding: 17px 30px;
+    padding-bottom: 16px;
+    margin-bottom: 170px;
+
+    font-family: "AvenirNext-Bold", sans-serif, "Arial";
+    font-size: @button-font-size;
+    background-color: white;
+    letter-spacing: 0.1px;
+    border: none;
+  }
+
+}

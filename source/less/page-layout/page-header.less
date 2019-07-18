@@ -1,0 +1,48 @@
+
+@media screen and (min-width: @desktop-viewport) {
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .page-header__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid teal;
+  }
+
+  .page-header__logo {
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+  }
+
+  .page-header__logo-img {
+    margin-top: 8px;
+    margin-bottom: 0;
+    margin-left: -1px;
+  }
+
+  .page-header__logo-text {
+    margin-top: 0px;
+    margin-bottom: 6px;
+
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    font-size: @header-font-size;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .page-header__telephone {
+    margin-top: 22px;
+    font-family: "AvenirNext-Regular", sans-serif, "Arial";
+
+    font-size: @tel-font-size;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    color: black;
+  }
+}
