@@ -16,14 +16,12 @@
   z-index: 1;
   bottom: 357px;
   left: 50%;
-  width: 940px;
-  height: 364px;
+  width: 90%;
   z-index: 3;
   padding: 0;
-  margin-left: -473px;
+  margin-left: -45%;
 
   background-color: white;
-  background-image: url("../img/loyalty_card_scanner_image_b.jpg");
   background-position: 0 20%;
   background-size: 372px auto;
   background-repeat: no-repeat;
@@ -32,7 +30,7 @@
     position: absolute;
     content: "";
     width: 8px;
-    height: 364px;
+    height: 100%;
     left: 0;
     top: 0;
     background-color: @popup-window-color;
@@ -42,8 +40,8 @@
 .success-popup__close {
   z-index: 4;
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   top: 20px;
   right: 20px;
 
@@ -56,10 +54,9 @@
 }
 
 .success-popup__wrapper {
-  width: 468px;
+  width: 90%;
   display: block;
-  margin-left: 431px;
-  margin-top: 51px;
+  margin-left: 5%;
 }
 
 .success-popup__title {
@@ -67,16 +64,15 @@
 
   letter-spacing: 0.3px;
   font-weight: normal;
-  font-size: @popup-title-size;
+  font-size: @popup-title-size * (3/4);
   font-family: "ZahrahforDouglas-MediumIt", sans-serif, "Arial";
 }
 
 .success-popup__message {
-  margin-top: -1px;
   margin-bottom: 0;
 
   text-align: left;
-  font-size: @map-title-size;
+  font-size: @map-title-size * (3/4);
   font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
   font-weight: normal;
   line-height: 30px;
@@ -94,11 +90,12 @@
 
 .success-popup__submit {
   display: block;
-  width: @popup-button-width;
+  width: 95%;
   padding: 18px 0;
   padding-bottom: 18px;
   padding-left: 2px;
   margin-top: 35px;
+  margin-bottom: 5%;
 
   border: none;
   background-color: @black;
@@ -112,5 +109,241 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.5)
+  }
+
+  .success-popup__window {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    bottom: 357px;
+    left: 50%;
+    width: 640px;
+    z-index: 3;
+    padding: 0;
+    margin-left: -320px;
+
+    background-color: white;
+    background-position: 0 20%;
+    background-size: 372px auto;
+    background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: @popup-window-color;
+    }
+  }
+
+  .success-popup__close {
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+
+    border: 0;
+    background-color: transparent;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+  }
+
+  .success-popup__wrapper {
+    width: 468px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .success-popup__title {
+    margin-bottom: 0;
+
+    letter-spacing: 0.3px;
+    font-weight: normal;
+    font-size: @popup-title-size;
+    font-family: "ZahrahforDouglas-MediumIt", sans-serif, "Arial";
+  }
+
+  .success-popup__message {
+    margin-top: -1px;
+    margin-bottom: 0;
+
+    text-align: left;
+    font-size: @map-title-size;
+    font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
+    font-weight: normal;
+    line-height: 30px;
+  }
+
+  .success-popup__text {
+    margin-top: 27px;
+
+    font-family: "AvenirNext-UltraLight";
+    font-weight: bold;
+    letter-spacing: 0.57px;
+    line-height: 22px;
+    color: @popup-text-color;
+  }
+
+  .success-popup__submit {
+    display: block;
+    width: @popup-button-width;
+    padding: 18px 0;
+    padding-bottom: 18px;
+    padding-left: 2px;
+    margin-top: 35px;
+    margin-bottom: 5%;
+
+    border: none;
+    background-color: @black;
+    color: white;
+    font-weight: bold;
+    font-size: @button-font-size;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: @desktop-viewport) {
+  .success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.5)
+  }
+
+  .success-popup__window {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    bottom: 357px;
+    left: 50%;
+    width: 940px;
+    height: 364px;
+    z-index: 3;
+    padding: 0;
+    margin-left: -473px;
+
+    background-color: white;
+    background-image: url("../img/loyalty_card_scanner_image_b.jpg");
+    background-position: 0 20%;
+    background-size: 372px auto;
+    background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 364px;
+      left: 0;
+      top: 0;
+      background-color: @popup-window-color;
+    }
+  }
+
+  .success-popup__close {
+    z-index: 4;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 20px;
+    right: 20px;
+
+    border: 0;
+    background-color: transparent;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+  }
+
+  .success-popup__wrapper {
+    width: 468px;
+    display: block;
+    margin-left: 431px;
+    margin-top: 51px;
+  }
+
+  .success-popup__title {
+    margin-bottom: 0;
+
+    letter-spacing: 0.3px;
+    font-weight: normal;
+    font-size: @popup-title-size;
+    font-family: "ZahrahforDouglas-MediumIt", sans-serif, "Arial";
+  }
+
+  .success-popup__message {
+    margin-top: -1px;
+    margin-bottom: 0;
+
+    text-align: left;
+    font-size: @map-title-size;
+    font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
+    font-weight: normal;
+    line-height: 30px;
+  }
+
+  .success-popup__text {
+    margin-top: 27px;
+
+    font-family: "AvenirNext-UltraLight";
+    font-weight: bold;
+    letter-spacing: 0.57px;
+    line-height: 22px;
+    color: @popup-text-color;
+  }
+
+  .success-popup__submit {
+    display: block;
+    width: @popup-button-width;
+    padding: 18px 0;
+    padding-bottom: 18px;
+    padding-left: 2px;
+    margin-top: 35px;
+
+    border: none;
+    background-color: @black;
+    color: white;
+    font-weight: bold;
+    font-size: @button-font-size;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
