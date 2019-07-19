@@ -34,7 +34,7 @@
           <li class="intro__list">Plattformbesucher als Neukunden gewinnen</li>
           <li class="intro__list">Digitale Termin- und Kundenverwaltung mit Shore</li>
         </ul>
-        <button class="intro__button" type="submit">ICH WILL DABEI SEIN</button>
+        <button class="intro__button" type="button">ICH WILL DABEI SEIN</button>
       </div>
     </section>
     <section class="page-main__explanation explanation">
@@ -64,8 +64,8 @@
       <div class="map__wrapper">
         <h2 class="map__title">Neue Kunden aus Ihrer Nachbarschaft! Sehen Sie selbst wie viele Douglas-Kunden es in Ihrer Nachbarschaft gibt.</h2>
         <form action="#" class="map__form" autocomplete="off">
-          <input class="map__post-index input-text" type="number" placeholder="Ihre Postleitzahl" required="">
-          <button class="map__submit-button" type="submit">JETZT ÜBERPRÜFEN</button>
+          <input class="map__post-index input-text" type="number" placeholder="Ihre Postleitzahl" minlength="5" maxlength="5" required="">
+          <button class="map__submit-button" type="button">JETZT ÜBERPRÜFEN</button>
         </form>
       </div>
     </section>
@@ -98,7 +98,8 @@
       <p class="benefits__text">Neben der exklusiven Mitgliedschaft erhalten <br>
         <span class="benefits__text-space"></span>
         Sie zudem eine umfangreiche Softwarelösung, um Ihr
-        <span class="benefits__text-space"></span> Unternehmen erfolgreich zu verwalten.</p>
+        <span class="benefits__text-space"></span> Unternehmen erfolgreich zu verwalten.
+      </p>
       <div class="benefits__wrapper">
         <ul class="benefits__list list-reset">
           <li class="benefits__list-element benefits__list-element--online">
@@ -114,13 +115,13 @@
             <p class="benefits__list-text">Automatische Terminerinnerun- gen an Ihre Kunden per Email oder SMS.</p><p>
           </p></li>
           <li class="benefits__list-element benefits__list-element--button">
-            <a href="#" class="benefits__button">Mehr über Shore erfahren</a>
+            <a href="https://www.shore.com/en/pricing/" class="benefits__button">Mehr über Shore erfahren</a>
           </li>
         </ul>
         <div class="benefits__demo">
           <picture>
-            <!-- <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x"> -->
-            <img class="benefits__img" src="img/partnerships_douglas_graphics_01_de.png" alt="partnership">
+            <source media="(min-width: 1350px)" srcset="img/partnerships_douglas_graphics_01_de.png">
+            <img class="benefits__img" src="img/partnerships_douglas_graphics_02_de.png" alt="partnership">
           </picture>
         </div>
       </div>
@@ -138,8 +139,37 @@
       </a>
     </div>
   </footer>
+
+  <template id="success">
+    <section class="success-popup">
+      <div class="success-popup__window">
+        <button class="success-popup__close" type="button" aria-label="close popup window"></button>
+        <div class="success-popup__wrapper">
+          <h2 class="success-popup__title">Glückwunsch!</h2>
+          <p class="success-popup__message">In Ihrer Nachbarschaft gibt es ca. 2954 Douglas Loyalty Card Nutzer</p>
+          <p class="success-popup__text">Treten Sie jetzt mit uns in Kontakt und schöpfen Sie dieses Kundenpotenzial zusammen mit Douglas und Shore voll aus.</p>
+          <button class="success-popup__submit" type="button">Jetzt unverbindlich anfragen</button>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="error">
+    <section class="error-popup">
+      <div class="error-popup__window">
+        <button class="error-popup__close" type="button" aria-label="close popup window"></button>
+        <div class="error-popup__wrapper">
+          <p class="error-popup__message">Leider konnten wir diese Postleit- zahl nicht finden.</p>
+          <p class="error-popup__text">Melden Sie sich bei unverbindlich bei uns.<br>Gemeinsam finden wir heraus wie auch Sie von Douglas- kunden in Ihrer Nähe profitieren können.</p>
+          <button class="error-popup__submit" type="button">Jetzt unverbindlich anfragen</button>
+          <button class="error-popup__re-submit" type="button">Nochmal versuchen</button>
+        </div>
+      </div>
+    </section>
+  </template>
+
   <script src="js/script.js"></script>
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/svgxuse.min.js" defer=""></script>
+  <!-- <script src="js/picturefill.min.js"></script> -->
+  <!-- <script src="js/svgxuse.min.js" defer></script> -->
 </body>
 </html>

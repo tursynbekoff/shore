@@ -1,3 +1,197 @@
+.intro {
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: black;
+  background-image: url("../img/hero_mobile.jpg");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  // width: 90%;
+  margin-left: 5%
+}
+
+.intro__title {
+  position: relative;
+  width: 70%;
+  margin-top: 10%;
+
+  font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
+  font-weight: 400;
+  font-size: @title-font-size*(2/3);
+  line-height: 48px * (2/3);
+  letter-spacing: 0.25px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -40%;
+    left: 0;
+    width: 80px;
+    height: 8px;
+    background-color: @under-title-color;
+
+  }
+}
+
+.intro__text {
+  width: 70%;
+  margin-top: 31px;
+
+  font-size: @text-font-size;
+  font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+  letter-spacing: 0.57px;
+  font-weight: bold;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.intro__promo-list {
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
+.intro__list {
+  position: relative;
+  width: 70%;
+
+  line-height: 22px;
+  letter-spacing: 0.57px;
+  margin-bottom: 0px;
+  font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 11px;
+    left: -45px;
+    top: 6px;
+
+    background-image: url("../img/arrow_green.svg");
+  }
+}
+
+.intro__button {
+  margin-top: 32px;
+  width: 266px;
+  padding: 17px 30px;
+  padding-bottom: 16px;
+  margin-bottom: 170px;
+
+  font-family: "AvenirNext-Bold", sans-serif, "Arial";
+  font-size: 15px;
+  background-color: white;
+  letter-spacing: 0.1px;
+  border: none;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .intro {
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: black;
+    background-image: url("../img/hero_tablet.jpg");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+  }
+
+  .intro__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%
+  }
+
+  .intro__title {
+    position: relative;
+    width: 40%;
+    margin-top: 82px;
+
+    font-family: "ZahrahforDouglas-Regular", sans-serif, "Arial";
+    font-weight: 400;
+    font-size: @title-font-size;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -39px;
+      left: 0;
+      width: 80px;
+      height: 8px;
+      background-color: @under-title-color;
+
+    }
+  }
+
+  .intro__text {
+    width: 40%;
+    margin-top: 21px;
+
+    font-size: @text-font-size;
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    letter-spacing: 0.57px;
+    font-weight: bold;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  .intro__promo-list {
+    margin-top: 5px;
+    margin-left: 45px;
+  }
+
+  .intro__list {
+    position: relative;
+    width: 40%;
+
+    line-height: 22px;
+    letter-spacing: 0.57px;
+    margin-bottom: 0px;
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 11px;
+      left: -45px;
+      top: 6px;
+
+      background-image: url("../img/arrow_green.svg");
+    }
+  }
+
+  .intro__button {
+    margin-top: 32px;
+    width: 266px;
+    padding: 17px 30px;
+    padding-bottom: 16px;
+    margin-bottom: 170px;
+
+    font-family: "AvenirNext-Bold", sans-serif, "Arial";
+    font-size: 15px;
+    background-color: white;
+    letter-spacing: 0.1px;
+    border: none;
+  }
+}
+
 
 @media screen and (min-width: @desktop-viewport) {
   .intro {
@@ -13,6 +207,7 @@
   }
 
   .intro__wrapper {
+    // margin-left: 0;
     display: flex;
     flex-direction: column;
     width: @desktop-width;
@@ -90,10 +285,9 @@
     margin-bottom: 170px;
 
     font-family: "AvenirNext-Bold", sans-serif, "Arial";
-    font-size: @button-font-size;
+    font-size: 15px;
     background-color: white;
     letter-spacing: 0.1px;
     border: none;
   }
-
 }

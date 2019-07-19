@@ -1,17 +1,355 @@
+.explanation {
+  position: relative;
+  width: 100%;
+
+
+  background-color: @explanation-background-color;
+}
+
+.explanation__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: @explanation-color;
+}
+
+.explanation__title {
+  position: relative;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+
+  text-transform: uppercase;
+  line-height: 34.5px;
+  letter-spacing: 1.2px;
+  font-family: "AvenirNext-DemiBold", sans-serif, "Arial";
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 8px;
+    left: 0px;
+    bottom: -20px;
+
+    background-color: @under-explanation-title-color;
+  }
+}
+
+.explanation__list {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3%;
+  margin-top: 39px;
+  margin-bottom: 38px;
+}
+
+.explanation__element {
+  position: relative;
+  width: 70%;
+  padding-left: 22%;
+  color: @explanation-text-color;
+}
+
+.explanation__element--savings {
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 3%;
+    top: 6px;
+    width: 72px;
+    height: 75px;
+    display: block;
+
+    background-image: url("../img/no_extra_cost_style.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.explanation__element--photoshooting {
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 3%;
+    top: 8px;
+    width: 72px;
+    height: 75px;
+    display: block;
+
+    background-image: url("../img/web_presentation_style.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.explanation__element--clients {
+  // margin-top: -21px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 3%;
+    top: 8px;
+    width: 72px;
+    height: 77px;
+    display: block;
+
+    background-image: url("../img/customer_management_style.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.explanation__element--marketing {
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 3%;
+    top: 7px;
+    width: 72px;
+    height: 75px;
+    display: block;
+
+    background-image: url("../img/newsletter_style.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.explanation__element--points {
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 3%;
+    top: 7px;
+    width: 72px;
+    height: 77px;
+    display: block;
+
+    background-image: url("../img/points_style.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.explanation__element__text {
+  font-family: "AvenirNext-UltraLight";
+  font-weight: bold;
+  letter-spacing: 0.57px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .explanation {
+    position: relative;
+    width: 100%;
+
+
+    background-color: @explanation-background-color;
+    height: 60vh;
+  }
+
+  .explanation__wrapper {
+    position: absolute;
+    left: 5%;
+    top: -50px;
+    width: 90%;
+    margin: 0 auto;
+    top: -90px;
+    // margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: @explanation-color;
+    box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.15);
+  }
+
+  .explanation__title {
+    position: relative;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    text-transform: uppercase;
+    line-height: 34.5px;
+    letter-spacing: 1.2px;
+    font-family: "AvenirNext-DemiBold", sans-serif, "Arial";
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 80px;
+      height: 8px;
+      left: 0px;
+      bottom: -20px;
+
+      background-color: @under-explanation-title-color;
+    }
+  }
+
+  .explanation__list {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 3%;
+    // margin-right: auto;
+    // margin-right: 0px;
+    margin-top: 59px;
+    margin-bottom: 58px;
+
+    // outline: 1px solid pink;
+  }
+
+  .explanation__element {
+    position: relative;
+    width: 36%;
+    padding-left: 14%;
+    color: @explanation-text-color;
+
+    // outline: 1px solid red;
+  }
+
+  .explanation__element--savings {
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 5%;
+      top: 6px;
+      width: 72px;
+      height: 75px;
+      display: block;
+
+      background-image: url("../img/no_extra_cost_style.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  .explanation__element--photoshooting {
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 5%;
+      top: 8px;
+      width: 72px;
+      height: 75px;
+      display: block;
+
+      background-image: url("../img/web_presentation_style.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  .explanation__element--clients {
+    // margin-top: -21px;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 5%;
+      top: 8px;
+      width: 72px;
+      height: 77px;
+      display: block;
+
+      background-image: url("../img/customer_management_style.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  .explanation__element--marketing {
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 5%;
+      top: 7px;
+      width: 72px;
+      height: 75px;
+      display: block;
+
+      background-image: url("../img/newsletter_style.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  .explanation__element--points {
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 5%;
+      top: 7px;
+      width: 72px;
+      height: 77px;
+      display: block;
+
+      background-image: url("../img/points_style.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  .explanation__element__text {
+    font-family: "AvenirNext-UltraLight";
+    font-weight: bold;
+    letter-spacing: 0.57px;
+    line-height: 22px;
+  }
+}
 
 @media screen and (min-width: @desktop-viewport) {
   .explanation {
     width: 100%;
 
     background-color: @explanation-background-color;
+    margin-bottom: 0;
+    height: auto;
   }
 
   .explanation__wrapper {
+    position: static;
+    top: 0;
+    left: 0;
+    // width: 100%;
     width: @desktop-width;
     margin: 0 auto;
     margin-top: -90px;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     background-color: @explanation-color;
@@ -47,6 +385,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-left: 0;
     margin-right: 40px;
     margin-top: 59px;
     margin-bottom: 58px;

@@ -1,3 +1,92 @@
+.page-header {
+  width: 100%;
+}
+
+.page-header__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  margin-left: 3%;
+}
+
+.page-header__logo-img {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.page-header__logo-text {
+  // width: 140px;
+  margin-top: 0px;
+  margin-bottom: 6px;
+
+  font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+  font-size: @header-font-size;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.page-header__telephone {
+  margin-top: 22px;
+  margin-right: 3%;
+  font-family: "AvenirNext-Regular", sans-serif, "Arial";
+
+  font-size: @tel-font-size;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .page-header {
+    width: 100%;
+  }
+
+  .page-header__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    margin-left: 3%;
+  }
+
+  .page-header__logo-img {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .page-header__logo-text {
+    // width: 140px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+
+    font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
+    font-size: @header-font-size;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .page-header__telephone {
+    margin-top: 22px;
+    margin-right: 3%;
+    font-family: "AvenirNext-Regular", sans-serif, "Arial";
+
+    font-size: @tel-font-size;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    color: black;
+  }
+}
 
 @media screen and (min-width: @desktop-viewport) {
   .page-header {
@@ -11,10 +100,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    // border: 1px solid teal;
   }
 
   .page-header__logo {
+    margin-left: 0;
+
     font-weight: 400;
     text-decoration: none;
     color: black;
@@ -29,6 +119,7 @@
   .page-header__logo-text {
     margin-top: 0px;
     margin-bottom: 6px;
+    margin-left: 0;
 
     font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
     font-size: @header-font-size;
@@ -38,6 +129,7 @@
 
   .page-header__telephone {
     margin-top: 22px;
+    margin-right: 0;
     font-family: "AvenirNext-Regular", sans-serif, "Arial";
 
     font-size: @tel-font-size;
