@@ -44,10 +44,10 @@
 }
 
 .benefits__list {
-  width: 330px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
   margin-top: 29px;
   margin-bottom: 37px;
 }
@@ -55,7 +55,7 @@
 .benefits__list-element {
   position: relative;
   display: block;
-  width: 256px;
+  width: 85%;
   padding-left: 90px;
   padding-top: 0;
   color: @explanation-text-color;
@@ -80,7 +80,7 @@
     content: "";
     position: absolute;
 
-    left: 0px;
+    left: 5%;
     top: 7px;
     width: 71px;
     height: 75px;
@@ -98,7 +98,7 @@
     content: "";
     position: absolute;
 
-    left: -4px;
+    left: 3%;
     top: 6px;
     width: 72px;
     height: 72px;
@@ -116,7 +116,7 @@
     content: "";
     position: absolute;
 
-    left: -4px;
+    left: 3%;
     top: 6px;
     width: 72px;
     height: 73px;
@@ -134,7 +134,7 @@
     content: "";
     position: absolute;
 
-    left: -5px;
+    left: 3%;
     top: 5px;
     width: 72px;
     height: 73px;
@@ -148,6 +148,7 @@
 }
 
 .benefits__list-element--button {
+  align-self: center;
   margin-top: 20px;
   padding-left: 0;
   display: block;
@@ -155,7 +156,7 @@
 
 .benefits__button {
   display: block;
-  width: 344px;
+  width: 100%;
   padding: 18px 0;
 
   border: none;
@@ -235,6 +236,7 @@
     margin-left: 5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-right: 1%;
     margin-top: 59px;

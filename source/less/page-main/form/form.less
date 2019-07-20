@@ -16,11 +16,22 @@
   margin-top: 27px;
   padding: 0;
 
+  text-align: left;
   border: none;
 }
 
+.form__checkbox {
+  position: absolute;
+  height: 0;
+  width: 0;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
 .form__label {
-  margin-left: 4px;
+  position: relative;
+  margin-left: 21px;
   font-family: "AvenirNext-UltraLight", sans-serif, "Arial";
 
   color: @explanation-text-color;
@@ -28,13 +39,37 @@
   font-weight: bold;
   line-height: 10px;
   letter-spacing: 0.51px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: -23px;
+    width: 14px;
+    height: 14px;
+
+    border: 1px solid @explanation-text-color;
+  }
+}
+
+.form__checkbox:checked ~ .form__label::after {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 2px;
+  width: 18px;
+  height: 16px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .form__submit-button {
   margin-top: 23px;
   margin-bottom: 63px;
   padding: 18px 0;
-  // padding-bottom: 0px;
 
   border: none;
   background-color: @black;

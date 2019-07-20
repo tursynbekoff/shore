@@ -87,6 +87,38 @@
     console.log(value);
     console.log(postIndexInput.value.length);
 
+    var closeSuccessPopupWindow = function () {
+      var successPopup = document.querySelector('.success-popup');
+      var closeSuccessPopup = document.querySelector('.success-popup__close');
+
+      closeSuccessPopup.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        successPopup.remove();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          successPopup.remove();
+        }
+      });
+    };
+
+    var closeErrorPopupWindow = function () {
+      var errorPopup = document.querySelector('.error-popup');
+      var closeErrorPopup = document.querySelector('.error-popup__close');
+
+      closeErrorPopup.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        errorPopup.remove();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          errorPopup.remove();
+        }
+      });
+    };
+
     if (typeof(value) === 'string'
         && postIndexInput.value !== ''
         && postIndexInput.value.length === 5) {
@@ -96,27 +128,13 @@
             + ' Douglas Loyalty Card Nutzer';
 
       main.appendChild(successTemplate);
+      closeSuccessPopupWindow();
 
-
-      var successPopup = document.querySelector('.success-popup');
-      var closeSuccessPopup = document.querySelector('.success-popup__close');
-
-      closeSuccessPopup.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        successPopup.remove();
-      });
     } else {
-      evt.preventDefault();
+      // evt.preventDefault();
       form.reset();
       main.appendChild(errorTemplate);
-
-      var errorPopup = document.querySelector('.error-popup');
-      var closeErrorPopup = document.querySelector('.error-popup__close');
-
-      closeErrorPopup.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        errorPopup.remove();
-      });
+      closeErrorPopupWindow();
     }
     value = null;
   });
