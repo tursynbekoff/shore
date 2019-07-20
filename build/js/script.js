@@ -131,7 +131,6 @@
       closeSuccessPopupWindow();
 
     } else {
-      // evt.preventDefault();
       form.reset();
       main.appendChild(errorTemplate);
       closeErrorPopupWindow();

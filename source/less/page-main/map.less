@@ -20,7 +20,7 @@
   margin-bottom: 35%;
 
   text-align: center;
-  background-color: white;
+  background-color: @explanation-background-color;
 
   &::after {
     content: "";
@@ -51,12 +51,17 @@
 
 .map__form {
   position: relative;
-  width: 98%;
+  width: 97%;
+  margin: 0 2%;
+  padding: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 22px;
   margin-bottom: 43px;
+
+  border-radius: 30px;
+  background-color: white;
 
   &::after {
     content: "";
@@ -65,13 +70,11 @@
     height: 1px;
     left: 0;
     bottom: -5px;
-
-    background-color: @black;
   }
 }
 
 .map__post-index {
-  padding: 15px 0;
+  padding: 10px 0;
   border: none;
   margin-top: 1px;
 }
@@ -82,9 +85,9 @@
 
   border: none;
   font-weight: bold;
-  font-size: @button-font-size * (0.85);
+  font-size: @button-font-size * (0.74);
   font-family: "AvenirNext-Bold", sans-serif, "Arial";
-  letter-spacing: 0.4px;
+  // letter-spacing: 0.1px;
   text-decoration: none;
   text-align: right;
   background-color: white;
@@ -123,6 +126,7 @@
     text-align: center;
     background-color: white;
     box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.15);
+    border-radius: 0;
 
     &::after {
       content: "";
@@ -220,6 +224,7 @@
     margin: 0 auto;
     margin-top: 130px;
     margin-bottom: 10px;
+    padding: 0;
 
     text-align: center;
     background-color: white;
@@ -259,6 +264,7 @@
     justify-content: space-between;
     margin-top: 22px;
     margin-bottom: 73px;
+    padding: 0;
 
     &::after {
       content: "";
@@ -274,6 +280,7 @@
 
   .map__post-index {
     margin-top: 1px;
+    padding: 10px 0;
   }
 
   .map__submit-button {
